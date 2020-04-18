@@ -56,6 +56,10 @@ body {
 .heading-primary {
     color: white;
     text-transform: uppercase;
+    
+    /* To remove any shakiness after the animation */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -63,6 +67,22 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+
+    /* 
+    for an animation to be applied to an HTML element, we have only two properties in CSS that needs to be defined.
+    One is, animation-name property and the other is animation-duration.
+    There's one other animation property known as animation-timing-function property, which defines how the animation will proceed, which means, how fast/slow the animation is supposed to proceed. 
+    There are different animation-timing-function values which are ease-out, ease-in, ease-in-out, linear, etc. 
+    */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    /* Some more interesting CSS3 animation properties
+        animation-delay: 0.2s; // There's a delay of 0.2s before the animation starts
+        animation-iteration-count: 3; // Animation happens 3 times.
+    */
+    
 }
 
 .heading-primary-sub {
@@ -70,4 +90,71 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+    
+    /*Instead of adding the 3 properties as seen above one-by-one, we can simply add all of them with a single property called animation*/
+    
+    animation: moveInRight 1s ease-out;
+    -webkit-animation: moveInRight 1s ease-out;
+}
+
+
+/*
+In order to make an animation rule, we use the @keyframes rule and give that rule a name, so that we can refer to that animation rule when using the animation property 
+ */
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+        -webkit-transform: translateX(-100px);
+        -moz-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+        -o-transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+    }
+}
+
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+        -webkit-transform: translateX(100px);
+        -moz-transform: translateX(100px);
+        -ms-transform: translateX(100px);
+        -o-transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+        -moz-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+    }
 }
