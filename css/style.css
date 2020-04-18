@@ -7,19 +7,39 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*borders and padding are no longer added to the total width or the total height of the element*/
+    
+    /*
+    We make sure that the default box-sizing property is to be inherited by each and every element that's 
+    the child of the html element. 
+     */
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /* 
+    Default font-size specified by the browser is 16px, and to set the root font-size to 10px, we calculate 10px to be 62.5% of 16px, and that's why we use that number.
+
+    Also, we don't directly hard-code 10px to be the default font-size for the website because that'll affect the people who view the webpage using using their own font-size.
+
+    Therefore, it is always better to use percentage, instead of absolute pixel value. The percentage mentioned will translate depending on the browser's default pixel value as explained above.
+    */
 }
 
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;
+    /* borders and padding are no longer added to the total width or the total height of the element */
 }
 
 .header {
@@ -34,12 +54,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -63,14 +83,14 @@ body {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     /* 
     for an animation to be applied to an HTML element, we have only two properties in CSS that needs to be defined.
@@ -91,9 +111,9 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
     
     /*Instead of adding the 3 properties as seen above one-by-one, we can simply add all of them with a single property called animation*/
     
@@ -109,19 +129,19 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
-        -webkit-transform: translateX(-100px);
-        -moz-transform: translateX(-100px);
-        -ms-transform: translateX(-100px);
-        -o-transform: translateX(-100px);
+        transform: translateX(-10rem);
+        -webkit-transform: translateX(-10rem);
+        -moz-transform: translateX(-10rem);
+        -ms-transform: translateX(-10rem);
+        -o-transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(10px);
-        -webkit-transform: translateX(10px);
-        -moz-transform: translateX(10px);
-        -ms-transform: translateX(10px);
-        -o-transform: translateX(10px);
+        transform: translateX(1rem);
+        -webkit-transform: translateX(1rem);
+        -moz-transform: translateX(1rem);
+        -ms-transform: translateX(1rem);
+        -o-transform: translateX(1rem);
     }
 
     100% {
@@ -138,19 +158,19 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
-        -webkit-transform: translateX(100px);
-        -moz-transform: translateX(100px);
-        -ms-transform: translateX(100px);
-        -o-transform: translateX(100px);
+        transform: translateX(10rem);
+        -webkit-transform: translateX(10rem);
+        -moz-transform: translateX(10rem);
+        -ms-transform: translateX(10rem);
+        -o-transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-10px);
-        -webkit-transform: translateX(-10px);
-        -moz-transform: translateX(-10px);
-        -ms-transform: translateX(-10px);
-        -o-transform: translateX(-10px);
+        transform: translateX(-1rem);
+        -webkit-transform: translateX(-1rem);
+        -moz-transform: translateX(-1rem);
+        -ms-transform: translateX(-1rem);
+        -o-transform: translateX(-1rem);
     }
 
     100% {
@@ -167,12 +187,12 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
-        -webkit-transform: translateY(30px);
-        -moz-transform: translateY(30px);
-        -ms-transform: translateY(30px);
-        -o-transform: translateY(30px);
-}
+        transform: translateY(3rem);
+        -webkit-transform: translateY(3rem);
+        -moz-transform: translateY(3rem);
+        -ms-transform: translateY(3rem);
+        -o-transform: translateY(3rem);
+    }
 
     100% {
         opacity: 1;
@@ -189,22 +209,22 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
+    position: relative;
+    font-size: 1.6rem;
+
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
     
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
-
-    position: relative;
 }
 
 .btn:hover {
@@ -214,7 +234,7 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
     -ms-transform: translateY(-3px);
     -o-transform: translateY(-3px);
 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
@@ -224,7 +244,7 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
     -ms-transform: translateY(-1px);
     -o-transform: translateY(-1px);
 
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -242,11 +262,11 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
     /* ::after pseudo-class acts as a child element on which the pseudo-class has been applied, and therefore, in this case, it is the .btn class, 
     where width and height will be applied to the pseudo-element after the element on which .btn class is applied.*/
     
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
     
     /*to make sure that this button is behind the actual button*/
     position: absolute;
@@ -278,7 +298,7 @@ we apply the following rules to them*/
 .btn-animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
     -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
-    
+
     /* To automatically apply the styles mentioned in the keyframe before the animation starts, we use the following property*/animation-fill-mode: backwards;
 }
 
