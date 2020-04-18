@@ -164,6 +164,27 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
 }
 
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        -webkit-transform: translateY(30px);
+        -moz-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        -o-transform: translateY(30px);
+}
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+    }
+}
+
+
 .btn:link,
 .btn:visited {
     text-transform: uppercase;
@@ -182,6 +203,8 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
+
+    position: relative;
 }
 
 .btn:hover {
@@ -207,4 +230,58 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
 .btn-white {
     background-color: white;
     color: #777;
+}
+
+/*when we use the ::after pseudo-element,we definitely have to mention the content property and the display property,otherwise,the element won't be visible.*/
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    /* ::after pseudo-class acts as a child element on which the pseudo-class has been applied, and therefore, in this case, it is the .btn class, 
+    where width and height will be applied to the pseudo-element after the element on which .btn class is applied.*/
+    
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    
+    /*to make sure that this button is behind the actual button*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.btn-white::after { background-color: white; }
+
+/* When we hover the element that comes after the element with the .btn class,
+we apply the following rules to them*/
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+    -moz-transform: scaleX(1.4) scaleY(1.6);
+    -ms-transform: scaleX(1.4) scaleY(1.6);
+    -o-transform: scaleX(1.4) scaleY(1.6);
+    
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
+    
+    /* To automatically apply the styles mentioned in the keyframe before the animation starts, we use the following property*/animation-fill-mode: backwards;
+}
+
+.xyz {
+
 }
