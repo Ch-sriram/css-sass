@@ -58,7 +58,7 @@ body {
   text-align: center; }
 
 .heading-primary {
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   /* To remove any shakiness after the animation */
   backface-visibility: hidden;
@@ -192,7 +192,7 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
-  background-color: white;
+  background-color: #fff;
   color: #777; }
 
 /*when we use the ::after pseudo-element,we definitely have to mention the content property and the display property,otherwise,the element won't be visible.*/
@@ -220,7 +220,7 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
   -o-transition: all 0.4s; }
 
 .btn--white::after {
-  background-color: white; }
+  background-color: #fff; }
 
 /* When we hover the element that comes after the element with the .btn class,
 we apply the following rules to them*/
