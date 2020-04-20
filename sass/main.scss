@@ -5,6 +5,7 @@ $color-primary-dark: #28b485;
 
 
 $color-grey-dark: #777;
+$color-white: #fff;
 
 *,
 *::after,
@@ -75,7 +76,7 @@ body {
 }
 
 .heading-primary {
-    color: white;
+    color: $color-white;
     text-transform: uppercase;
     
     /* To remove any shakiness after the animation */
@@ -247,7 +248,7 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
 }
 
 .btn--white {
-    background-color: white;
+    background-color: $color-white;
     color: $color-grey-dark;
 }
 
@@ -280,7 +281,7 @@ In order to make an animation rule, we use the @keyframes rule and give that rul
     -o-transition: all 0.4s;
 }
 
-.btn--white::after { background-color: white; }
+.btn--white::after { background-color: $color-white; }
 
 /* When we hover the element that comes after the element with the .btn class,
 we apply the following rules to them*/
