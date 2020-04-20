@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    
+    /*
+    We make sure that the default box-sizing property is to be inherited by each and every element that's 
+    the child of the html element. 
+     */
+    box-sizing: inherit;
+}
+
+html {
+    // We can say that font-size should also go into the _typography.scss file, but this here is used as a base definition of font-size for all the elements that are the children of the html element, and therefore, we can say that font-size property is defined in _base.scss aptly.
+
+    // This defines what 1 rem is (which is 10px)
+    font-size: 62.5%;
+    
+    /* 
+    Default font-size specified by the browser is 16px, and to set the root font-size to 10px, we calculate 10px to be 62.5% of 16px, and that's why we use that number.
+
+    Also, we don't directly hard-code 10px to be the default font-size for the website because that'll affect the people who view the webpage using using their own font-size.
+
+    Therefore, it is always better to use percentage, instead of absolute pixel value. The percentage mentioned will translate depending on the browser's default pixel value as explained above.
+    */
+}
+
+body {
+    box-sizing: border-box;
+    /* borders and padding are no longer added to the total width or the total height of the element */
+}
