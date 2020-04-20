@@ -1,0 +1,14 @@
+{
+  "name": "nature-tours",
+  "version": "1.0.0",
+  "description": "landing page for nature tours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ch Sriram",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
