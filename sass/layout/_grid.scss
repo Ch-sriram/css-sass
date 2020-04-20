@@ -1,6 +1,6 @@
 .row {
     max-width: $grid-width;  // 1140px is the standard.
-    background-color: #eee;
+    // background-color: #eee;
     margin: 0 auto;
     
     &:not(:last-child) {
@@ -15,7 +15,7 @@
 
     // ^="col-" Selects all the elements related to classes that start with "col-" strictly as the beginning of the class name of the element.
     [class^="col-"] {
-        background-color: orangered;
+        // background-color: orangered;
         float: left;
     
         &:not(:last-child) {
