@@ -1,0 +1,306 @@
+// UNIVERSAL COLORS
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+
+$color-grey-dark: #777;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    
+    /*
+    We make sure that the default box-sizing property is to be inherited by each and every element that's 
+    the child of the html element. 
+     */
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /* 
+    Default font-size specified by the browser is 16px, and to set the root font-size to 10px, we calculate 10px to be 62.5% of 16px, and that's why we use that number.
+
+    Also, we don't directly hard-code 10px to be the default font-size for the website because that'll affect the people who view the webpage using using their own font-size.
+
+    Therefore, it is always better to use percentage, instead of absolute pixel value. The percentage mentioned will translate depending on the browser's default pixel value as explained above.
+    */
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+
+    box-sizing: border-box;
+    /* borders and padding are no longer added to the total width or the total height of the element */
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), 
+                      url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top; /* top of the image always stays at the top even after resizing the browser. Other options are bottom, left, right and center. */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);   /*takes in 4 co-ordinates (x, y) where 'y' from top to bottom (not the traditional bottom to top) */
+    position: relative;
+}
+
+.header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header__logo {
+    height: 3.5rem;
+}
+
+.header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.heading-primary {
+    color: white;
+    text-transform: uppercase;
+    
+    /* To remove any shakiness after the animation */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    /* 
+    for an animation to be applied to an HTML element, we have only two properties in CSS that needs to be defined.
+    One is, animation-name property and the other is animation-duration.
+    There's one other animation property known as animation-timing-function property, which defines how the animation will proceed, which means, how fast/slow the animation is supposed to proceed. 
+    There are different animation-timing-function values which are ease-out, ease-in, ease-in-out, linear, etc. 
+    */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    /* Some more interesting CSS3 animation properties
+        animation-delay: 0.2s; // There's a delay of 0.2s before the animation starts
+        animation-iteration-count: 3; // Animation happens 3 times.
+    */
+    
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    
+    /*Instead of adding the 3 properties as seen above one-by-one, we can simply add all of them with a single property called animation*/
+    
+    animation: moveInRight 1s ease-out;
+    -webkit-animation: moveInRight 1s ease-out;
+}
+
+
+/*
+In order to make an animation rule, we use the @keyframes rule and give that rule a name, so that we can refer to that animation rule when using the animation property 
+ */
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+        -webkit-transform: translateX(-10rem);
+        -moz-transform: translateX(-10rem);
+        -ms-transform: translateX(-10rem);
+        -o-transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+        -webkit-transform: translateX(1rem);
+        -moz-transform: translateX(1rem);
+        -ms-transform: translateX(1rem);
+        -o-transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+    }
+}
+
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+        -webkit-transform: translateX(10rem);
+        -moz-transform: translateX(10rem);
+        -ms-transform: translateX(10rem);
+        -o-transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+        -webkit-transform: translateX(-1rem);
+        -moz-transform: translateX(-1rem);
+        -ms-transform: translateX(-1rem);
+        -o-transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+    }
+}
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+        -webkit-transform: translateY(3rem);
+        -moz-transform: translateY(3rem);
+        -ms-transform: translateY(3rem);
+        -o-transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+    }
+}
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+    background-color: white;
+    color: $color-grey-dark;
+}
+
+/*when we use the ::after pseudo-element,we definitely have to mention the content property and the display property,otherwise,the element won't be visible.*/
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    /* ::after pseudo-class acts as a child element on which the pseudo-class has been applied, and therefore, in this case, it is the .btn class, 
+    where width and height will be applied to the pseudo-element after the element on which .btn class is applied.*/
+    
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    
+    /*to make sure that this button is behind the actual button*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.btn--white::after { background-color: white; }
+
+/* When we hover the element that comes after the element with the .btn class,
+we apply the following rules to them*/
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+    -moz-transform: scaleX(1.4) scaleY(1.6);
+    -ms-transform: scaleX(1.4) scaleY(1.6);
+    -o-transform: scaleX(1.4) scaleY(1.6);
+    
+    opacity: 0;
+}
+
+.btn--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
+
+    /* To automatically apply the styles mentioned in the keyframe before the animation starts, we use the following property*/animation-fill-mode: backwards;
+}
+
+.xyz {
+
+}
