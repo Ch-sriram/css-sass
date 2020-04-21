@@ -1,0 +1,57 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: $color-white;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    
+    transform: skewX(-12deg);
+    -webkit-transform: skewX(-12deg);
+    -moz-transform: skewX(-12deg);
+    -ms-transform: skewX(-12deg);
+    -o-transform: skewX(-12deg);
+    
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+
+        // to make the content float around the this particular class' element, we use the shape-outside property on which we apply the circle() function. The shape-outside property only works if height, width and the float property is defined for an element. Syntax of the circle() function: circle(<radius> at <x, y coordinates> 
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        // <radius> of 50% in this case is 50% of the defined width which is 7.5rem. <x, y coordinates> of 50% 50% mean that the center of the circle is at 50% of width and 50% of height which is 7.5rem & 7.5rem in this case.
+        
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        
+        transform: translateX(-3rem) skewX(12deg);
+        -webkit-transform: translateX(-3rem) skewX(12deg);
+        -moz-transform: translateX(-3rem) skewX(12deg);
+        -ms-transform: translateX(-3rem) skewX(12deg);
+        -o-transform: translateX(-3rem) skewX(12deg);
+    }
+    
+    &__img {
+        height: 100%;
+    }
+    
+    &__text {
+        transform: skewX(12deg);
+        -webkit-transform: skewX(12deg);
+        -moz-transform: skewX(12deg);
+        -ms-transform: skewX(12deg);
+        -o-transform: skewX(12deg);
+    }
+
+}
+
+.x {
+}
