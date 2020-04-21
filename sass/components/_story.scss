@@ -23,6 +23,7 @@
         width: 15rem;
         height: 15rem;
         float: left;
+        overflow: hidden;
 
         // to make the content float around the this particular class' element, we use the shape-outside property on which we apply the circle() function. The shape-outside property only works if height, width and the float property is defined for an element. Syntax of the circle() function: circle(<radius> at <x, y coordinates> 
         -webkit-shape-outside: circle(50% at 50% 50%);
@@ -37,10 +38,27 @@
         -moz-transform: translateX(-3rem) skewX(12deg);
         -ms-transform: translateX(-3rem) skewX(12deg);
         -o-transform: translateX(-3rem) skewX(12deg);
+
+        position: relative; // as this is the container for .story__caption
     }
     
     &__img {
         height: 100%;
+        
+        transform: translateX(-4rem) scale(1.4);
+        -webkit-transform: translateX(-4rem) scale(1.4);
+        -moz-transform: translateX(-4rem) scale(1.4);
+        -ms-transform: translateX(-4rem) scale(1.4);
+        -o-transform: translateX(-4rem) scale(1.4);
+        
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
     }
     
     &__text {
@@ -51,6 +69,56 @@
         -o-transform: skewX(12deg);
     }
 
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+        transform: translate(-50%, -20%);
+        -webkit-transform: translate(-50%, -20%);
+        -moz-transform: translate(-50%, -20%);
+        -ms-transform: translate(-50%, -20%);
+        -o-transform: translate(-50%, -20%);
+        
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    
+
+
+    &:hover &__caption {
+        opacity: 1;
+
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
+
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1.0);
+        -webkit-transform: translateX(-4rem) scale(1.0);
+        -moz-transform: translateX(-4rem) scale(1.0);
+        -ms-transform: translateX(-4rem) scale(1.0);
+        -o-transform: translateX(-4rem) scale(1.0);
+        
+        filter: blur(3px) brightness(80%);
+        -webkit-filter: blur(3px) brightness(80%);
+    }
 }
 
 .x {
