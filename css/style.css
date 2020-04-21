@@ -172,6 +172,15 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top-small {
+  margin-top: 1.5rem; }
+
+.u-margin-top-medium {
+  margin-top: 4rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
 .btn {
   /*when we use the ::after pseudo-element,we definitely have to mention the content property and the display property,otherwise,the element won't be visible.*/ }
   .btn:link, .btn:visited {
@@ -218,6 +227,11 @@ body {
     color: #777; }
     .btn--white::after {
       background-color: #fff; }
+  .btn--green {
+    background-color: #55c57a;
+    color: #fff; }
+    .btn--green::after {
+      background-color: #55c57a; }
   .btn::after {
     content: "";
     display: inline-block;
@@ -352,11 +366,11 @@ body {
     -o-transform: translateY(-1.5rem) scale(1.03); }
 
 .card {
-  perspective: 150rem;
   -webkit-perspective: 150rem;
   -moz-perspective: 150rem;
   -ms-perspective: 150rem;
   -o-perspective: 150rem;
+  perspective: 150rem;
   position: relative;
   height: 52rem; }
   .card__side {
@@ -453,6 +467,26 @@ body {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eeeeee; }
+  .card__cta {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%); }
+  .card__price-box {
+    margin-bottom: 8rem;
+    color: #fff; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .header {
   height: 95vh;
