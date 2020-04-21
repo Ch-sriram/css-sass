@@ -1,8 +1,6 @@
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), 
-                      url(../img/hero.jpg);
-    background-size: cover;
+    @include background("../img/hero.jpg");
     background-position: top; /* top of the image always stays at the top even after resizing the browser. Other options are bottom, left, right and center. */
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);   /*takes in 4 co-ordinates (x, y) where 'y' from top to bottom (not the traditional bottom to top) */
     position: relative;
