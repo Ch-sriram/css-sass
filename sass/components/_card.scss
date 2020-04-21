@@ -1,0 +1,82 @@
+.card {
+    // The perspective property is always applied on the parent element with a really big value like 1500px. This property gives us a feel that the card is really rotating on the webpage.
+    perspective: 150rem;
+    -webkit-perspective: 150rem;
+    -moz-perspective: 150rem;
+    -ms-perspective: 150rem;
+    -o-perspective: 150rem;
+
+    position: relative;
+    height: 50rem;
+
+    &__side {
+        background-color: orangered;
+        height: 50rem;
+        transition: all .8s ease;
+        -webkit-transition: all .8s ease;
+        -moz-transition: all .8s ease;
+        -ms-transition: all .8s ease;
+        -o-transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        //Using the property below, we can hide the backside of the card.
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+            
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+            
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            }
+        }
+    }
+    
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+    }
+    
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+    }
+}
+
+
+.x {
+    
+}
