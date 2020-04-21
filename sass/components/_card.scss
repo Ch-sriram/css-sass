@@ -169,7 +169,7 @@
         top: 50%;
         left: 50%;
         text-align: center;
-        
+
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -188,13 +188,9 @@
         text-transform: uppercase;
     }
 
-    &__price-value {
+    &__price-value { 
         font-size: 6rem;
         font-weight: 100;
     }
 
-}
-
-
-.x {
 }
