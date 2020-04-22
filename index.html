@@ -294,9 +294,50 @@
                                     <input type="text" class="form__input" placeholder="Full Name" id="name" required>
                                     <label for="name" class="form__label">Full Name</label>
                                 </div>                                
+                                
                                 <div class="form__group">
                                     <input type="email" class="form__input" placeholder="Email address" id="email" required>
                                     <label for="email" class="form__label">Email address</label>                                
+                                </div>
+
+                                <!-- 
+                                    There's no way to do style radio buttons 
+                                    using CSS, and therefore, what we 
+                                    generally do is, we have the usual radio 
+                                    button and a label associated to it.
+                                    
+                                    And then, we hide the actual radio button
+                                    and then put an empty span element 
+                                    inside the label as shown below. We 
+                                    style that span to look as a radio 
+                                    button, so that whenever the user clicks 
+                                    on the styled span element (which looks 
+                                    like a radio button), the user is 
+                                    actually clicking on the label 
+                                    associated to the radio button, and that 
+                                    way, the hidden radio button is also 
+                                    checked because of that click. And 
+                                    that's how we style a radio button. 
+                                 -->
+                                <div class="form__group u-margin-bottom-medium">
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" name="size" id="small" checked>
+                                        <label for="small" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            Small tour group
+                                        </label>
+                                    </div>
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" name="size" id="large">
+                                        <label for="large" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            Large tour group
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form__group">
+                                    <button class="btn btn--green">Next step &rarr;</button>
                                 </div>
                             </form>
                         </div>
