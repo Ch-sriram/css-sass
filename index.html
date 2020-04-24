@@ -2,7 +2,12 @@
 <html lang="en">
     <head>
         <!-- 
-            Things we'll learn: How to design a simple website footer.
+            Things we'll learn: 
+            1. What the "checkbox hack" is and how it works.
+            2. How to create custom animation timing functions using cubic bezier curves.
+            3. How to animate "solid-color gradients".
+            4. How and why to use transform-origin.
+            5. In general: create an amazingly creative effect!
         -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +21,24 @@
         <title>Nature Tours | Exciting Tours For Adventurous People</title>
     </head>
     <body>
+        <!-- 
+            We create a checkbox and use the checked pseudo-class to make a navigation (hamburger) button, which we will use for the navigation in our website.
+            Eventually, we'll hide the checkbox and simply use the label related to the checkbox as an extension to whether the checkbox has been clicked or not.
+         -->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button"></label>
+            <div class="navigation__background">&nbsp;</div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Nature Tours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+                </ul>
+            </nav>
+        </div>
         <header class="header">
             <div class="header__logo-box">
                 <img src="img/logo-white.png" alt="logo" class="header__logo">
