@@ -2,12 +2,7 @@
 <html lang="en">
     <head>
         <!-- 
-            Things we'll learn:
-            1. How to implement "solid-color gradients".
-            2. How the general and adjacent sibling selectors work and why we need them.
-            3. How to use the ::input-placeholder pseudo-element.
-            4. How and when to use the :focus, :invalid, placeholder-shown and :checked pseudo-classes.
-            5. Techniques to build custom radio buttons.
+            Things we'll learn: How to design a simple website footer.
         -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -346,6 +341,32 @@
             </section>
             
         </main>
+
+        <footer class="footer">
+            <div class="footer__logo-box u-margin-bottom-big">
+                <img src="img/logo-green-2x.png" alt="Full Green Logo" class="footer__logo">
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Built by <a href="https://github.com/Ch-sriram" class="footer__link">Chandrabhatta Sriram</a> to learn CSS/SASS from <a href="https://www.udemy.com/course/advanced-css-and-sass/" class="footer__link">Jonas Schmedtmann's Advanced CSS & SASS Course</a>. <br>
+                        Design Copyright &copy; Jonas Schmedtmann.
+                    </p>
+                </div>
+            </div> <!--end of .row-->
+        </footer>
         
         <!--         
         <section class="grid-test">
