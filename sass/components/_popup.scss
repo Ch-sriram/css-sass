@@ -1,0 +1,59 @@
+.popup {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    @include center-element;
+    background-color: rgba($color-black, .8);
+    z-index: 9999;
+
+    &__content {
+        position: absolute;
+        @include center-element;
+        width: 75%;
+        // height: 50rem;   // TESTING
+        background-color: $color-white;
+        border-radius: 3px;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        display: table;
+        overflow: hidden;
+    }
+
+    &__left {
+        width: 33.333333%;
+        display: table-cell;
+        overflow: hidden;
+    }
+
+    &__right {
+        width: 66.666667%;
+        display: table-cell;
+        vertical-align: middle; // top & bottom are also there
+        padding: 3rem 5rem;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        // divides the div into two equal columns
+        column-count: 2;    
+
+        // gives a hap between the equally divided columns
+        column-gap: 4rem;   // 1em = 14px; 1rem = 16px; (rem from root and em from the current element's font size)
+        
+        // gives a creasing between the divided columns
+        column-rule: 1px solid $color-grey-light-2;
+
+        // to include hyphenation, we use the foll. property
+        hyphens: auto;  // other two are none and manual.
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        -o-hyphens: auto;
+        -ms-hyphens: auto;
+    }
+}
