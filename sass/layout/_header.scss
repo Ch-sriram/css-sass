@@ -11,6 +11,22 @@
     /*takes in 4 co-ordinates (x, y) where 'y' from top to bottom (not the traditional bottom to top) */
     
     position: relative; // since we position the heading inside using absolute positioning.
+    
+    @include respond(tab-land) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        -ms-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        -o-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+    
+    @include respond(tab-port) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+        -ms-clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+        -o-clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+    }
 
     &__logo-box {
         position: absolute;

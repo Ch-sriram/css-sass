@@ -3,7 +3,6 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
 }
 
 
@@ -17,12 +16,13 @@ body {
 
     margin-bottom: 6rem;
 
+    
     &--main {
         display: block;
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
-
+        
         /* 
         for an animation to be applied to an HTML element, we have only two properties in CSS that needs to be defined.
         One is, animation-name property and the other is animation-duration.
@@ -32,14 +32,18 @@ body {
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
-
+        
         /* Some more interesting CSS3 animation properties
-            animation-delay: 0.2s; // There's a delay of 0.2s before the animation starts
-            animation-iteration-count: 3; // Animation happens 3 times.
+        animation-delay: 0.2s; // There's a delay of 0.2s before the animation starts
+        animation-iteration-count: 3; // Animation happens 3 times.
         */
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 6rem;
+        }
         
     }
-
+    
     &--sub {
         display: block;
         font-size: 2rem;
@@ -50,6 +54,10 @@ body {
         
         animation: moveInRight 1s ease-out;
         -webkit-animation: moveInRight 1s ease-out;
+        
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -66,6 +74,9 @@ body {
     -moz-transition: all .2s;
     -ms-transition: all .2s;
     -o-transition: all .2s;
+
+    @include respond(tab-port) { font-size: 3rem; }
+    @include respond(phone) { font-size: 2.5rem; }
     
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);

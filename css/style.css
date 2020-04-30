@@ -14,6 +14,9 @@ $breakpoint argument choices:
 Inside a media query, we don't use rem units because they do no inherit the root font-size that we (the author of the webpage) set as the default size.
 
 Instead, we use the em units where 1em = 16px by default.
+
+ORDER of media-queries: 
+Base + typography > general layout > page layout > components
 */
 /*
 In order to make an animation rule, we use the @keyframes rule and give that rule a name, so that we can refer to that animation rule when using the animation property 
@@ -110,14 +113,17 @@ html {
 
 body {
   box-sizing: border-box;
-  /* borders and padding are no longer added to the total width or the total height of the element */ }
+  /* borders and padding are no longer added to the total width or the total height of the element */
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -141,9 +147,13 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     /* Some more interesting CSS3 animation properties
-            animation-delay: 0.2s; // There's a delay of 0.2s before the animation starts
-            animation-iteration-count: 3; // Animation happens 3 times.
+        animation-delay: 0.2s; // There's a delay of 0.2s before the animation starts
+        animation-iteration-count: 3; // Animation happens 3 times.
         */ }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 6rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -152,6 +162,9 @@ body {
     /*Instead of adding the 3 properties as seen above one-by-one, we can simply add all of them with a single property called animation*/
     animation: moveInRight 1s ease-out;
     -webkit-animation: moveInRight 1s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -168,6 +181,12 @@ body {
   -moz-transition: all .2s;
   -ms-transition: all .2s;
   -o-transition: all .2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -836,6 +855,20 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /*takes in 4 co-ordinates (x, y) where 'y' from top to bottom (not the traditional bottom to top) */
   position: relative; }
+  @media (max-width: 75em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      -moz-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      -ms-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      -o-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+  @media (max-width: 56.25em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+      -moz-clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+      -ms-clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+      -o-clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -858,6 +891,13 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 2.5rem; } }
   .row::after {
     content: "";
     display: table;
@@ -866,6 +906,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0 !important;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -882,7 +929,11 @@ body {
 .footer {
   background-color: #333;
   padding: 10rem 0;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  color: #f7f7f7; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center; }
   .footer__logo {
@@ -892,6 +943,10 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
+    @media (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -922,6 +977,10 @@ body {
     padding-top: 2rem;
     width: 80%;
     float: right; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
 
 .navigation__checkbox {
   display: none; }
@@ -942,6 +1001,14 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -957,6 +1024,14 @@ body {
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__nav {
   height: 100vh;

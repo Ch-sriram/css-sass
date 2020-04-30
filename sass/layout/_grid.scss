@@ -2,9 +2,19 @@
     max-width: $grid-width;  // 1140px is the standard.
     // background-color: #eee;
     margin: 0 auto;
+
     
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+    
+    @include respond(tab-port) {
+        max-width: $grid-width-small;
+        padding: 0 2.5rem;
     }
 
     @include clearfix;
@@ -20,6 +30,15 @@
     
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+            
+            @include respond(tab-port) {
+                margin-right: 0 !important;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
         }
     }
 
