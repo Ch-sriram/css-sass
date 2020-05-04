@@ -19,6 +19,16 @@
     -ms-transform: skewX(-12deg);
     -o-transform: skewX(-12deg);
     
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -40,6 +50,10 @@
         -o-transform: translateX(-3rem) skewX(12deg);
 
         position: relative; // as this is the container for .story__caption
+
+        @include respond(phone) {
+            transform: translate(-3rem) skewX(0);
+        }
     }
     
     &__img {
@@ -67,6 +81,10 @@
         -moz-transform: skewX(12deg);
         -ms-transform: skewX(12deg);
         -o-transform: skewX(12deg);
+        
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {
