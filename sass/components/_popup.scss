@@ -19,17 +19,24 @@
         transform: translate(-50%, -50%) scale(.25);
         width: 75%;
         background-color: $color-white;
-        height: 50rem;   // TESTING
+        // height: 50rem;   // TESTING
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         border-radius: 3px;
         display: table; 
         overflow: hidden;
         transition: all .4s .2s;
+
+        @include respond(phone) {
+            width: 90%;
+        }
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        @include respond(tab-land) { width: 40%; }
+        @include respond(tab-port) { width: 0; }
     }
 
     &__right {
@@ -37,11 +44,18 @@
         display: table-cell;
         vertical-align: middle; // top & bottom are also there
         padding: 3rem 5rem;
+
+        @include respond(tab-land) { width: 60%; }
+        @include respond(tab-port) { width: 100%; }
     }
 
     &__img {
         display: block;
         width: 100%;
+        // height: 20%;
+
+        @include respond(tab-land) { height: 25%; }
+        @include respond(tab-port) { display: none; }
     }
 
     &__text {
@@ -63,6 +77,17 @@
         -webkit-hyphens: auto;
         -o-hyphens: auto;
         -ms-hyphens: auto;
+
+        @include respond(tab-land) {
+            font-size: 1.2rem;
+        }
+
+        @include respond(tab-port) { font-size: 1.8rem; }
+
+        @include respond(phone) {
+            font-size: 1.3rem;
+            column-count: 1;
+        }
     }
 
 

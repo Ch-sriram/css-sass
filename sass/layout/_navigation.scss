@@ -87,6 +87,7 @@
 
     &__item {
         margin: 1rem;
+        @include respond(phone) { margin: .5rem; }
     }
 
     &__link {
@@ -111,6 +112,8 @@
                 display: inline-block;
                 margin-right: 1.5rem;
             }
+
+            @include respond(phone) { font-size: 2.8rem; }
         }
 
 
