@@ -1,6 +1,6 @@
 .header {
     height: 95vh;
-    @include background("../img/hero.jpg");
+    @include background("../img/hero-small.jpg", $color-primary-light, $color-primary-dark);
     background-position: top; /* top of the image always stays at the top even after resizing the browser. Other options are bottom, left, right and center. */
     
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -11,6 +11,12 @@
     /*takes in 4 co-ordinates (x, y) where 'y' from top to bottom (not the traditional bottom to top) */
     
     position: relative; // since we position the heading inside using absolute positioning.
+    
+    // we use 192dpi as a reference because that's the resolution of the apple's retina display. Anything greater than 192dpi should have the following properties apply to them mentioned in the media query below. (dpi = dots per inch)
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (min-width: 125em) {
+        @include background("../img/hero.jpg", $color-secondary-light, $color-secondary-dark);
+    }
     
     @include respond(tab-land) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -27,6 +33,7 @@
         -o-clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
     }
+
 
     &__logo-box {
         position: absolute;

@@ -10,7 +10,7 @@
 
 .section-features {
     padding: 20rem 0;
-    @include background("../img/nat-4.jpg");
+    @include background("../img/nat-4.jpg", $color-primary-light, $color-primary-dark);
     margin-top: -10rem;
     
     transform: skewY(-7deg);
