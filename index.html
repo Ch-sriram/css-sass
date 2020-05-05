@@ -3,9 +3,7 @@
     <head>
         <!-- 
             Things we'll learn: 
-            1. How to use the srcset attribute on the <img> and <source> elements, together with density descriptors.
-            2. How and why to use the <picture> element for art direction.
-            3. How to write media queries in HTML.
+            1. How to allow the browser to decide the best image to download, using the srcset attribute, width descriptors, and the sizes attribute of the <img> element.
         -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,9 +85,44 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
+
+                            <!-- 
+                                Unlike in art direction where we basically force the browser to use a certain image according to a media query, in this situation right now, we allow the browser to choose the best image for the current viewport and the pixel density situation we have.
+
+                                Therefore, here we are applying Density Switching and Resolution Switching.
+
+                                We will use the <img> element with the srcset attribute where we specify which image to use along with the width descriptor where we specify the width of the image so that the browser loses the extra step of downloading the image to know the width of the image.
+
+                                That alone is NOT sufficient for the browser to decide which image to download for the use-case, because what the browser knows till now is the viewport width of the image and the display density of the image.
+
+                                We have to give the browser more information about the images being used for the use-case using the sizes attribute where we inform the browser about the approx width of the image(s) at different viewport width.
+
+                                In the sizes attribute in the <img> element, we mention media queries for different breakpoints using either the max-width or min-width property. Example, for a viewport with a 900px width, to show an image with width of 170px, we divide the image width against the viewport width i.e., (171/900)px * 100 = 19px, which is approximately, 20px of the viewport width (which is 900px), therefore, we mention 20vw along with the media query, as shown below.
+
+                                We mention the breakpoints for 900px (56.25em) and 600px (37.25em). Default size is 300px (18.75em).
+
+                                In the end, we shall use the normal src attribute where we mention the image's relative path as usual. We use the src attribute for older browser compatibility, in-case the webpage is opened using an older browser where srcset attribute is not supported.
+                             -->
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em" alt="Photo-1" 
+                            class="composition__photo composition__photo--p1" 
+                            src="img/nat-1-large.jpg">
+                            
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em" alt="Photo-2" 
+                            class="composition__photo composition__photo--p2" 
+                            src="img/nat-2-large.jpg">
+                            
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 18.75em" alt="Photo-3" 
+                            class="composition__photo composition__photo--p3" 
+                            src="img/nat-3-large.jpg">
+
+                            <!--                             
                             <img src="img/nat-1-large.jpg" alt="Photo-1" class="composition__photo composition__photo--p1">
-                            <img src="img/nat-2-large.jpg" alt="Photo-2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo-3" class="composition__photo composition__photo--p3">
+                            <img src="img/nat-2-large.jpg" alt="Photo-1" class="composition__photo composition__photo--p3">
+                            <img src="img/nat-3-large.jpg" alt="Photo-1" class="composition__photo composition__photo--p3">
+                             -->
                         </div>
                     </div>
                 </div> <!-- end of .row -->
@@ -375,11 +408,11 @@
                  -->
                 <picture>
                     <!-- max-width <= 600px (37.5em) -->
-                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)" src="img/logo-green-small-2x.png">
                     
                     <!-- Provide the normal images after the <source> element -->
                     <!-- max-width > 600px (37.5em) -->
-                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Green Logo" class="footer__logo">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Green Logo" class="footer__logo" src="img/logo-green-2x.png">
                 </picture>
             </div>
 
