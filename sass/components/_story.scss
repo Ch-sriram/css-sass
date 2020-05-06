@@ -34,22 +34,33 @@
         height: 15rem;
         float: left;
         overflow: hidden;
+        
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
 
-        // to make the content float around the this particular class' element, we use the shape-outside property on which we apply the circle() function. The shape-outside property only works if height, width and the float property is defined for an element. Syntax of the circle() function: circle(<radius> at <x, y coordinates> 
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        // <radius> of 50% in this case is 50% of the defined width which is 7.5rem. <x, y coordinates> of 50% 50% mean that the center of the circle is at 50% of width and 50% of height which is 7.5rem & 7.5rem in this case.
-        
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        
         transform: translateX(-3rem) skewX(12deg);
         -webkit-transform: translateX(-3rem) skewX(12deg);
         -moz-transform: translateX(-3rem) skewX(12deg);
         -ms-transform: translateX(-3rem) skewX(12deg);
         -o-transform: translateX(-3rem) skewX(12deg);
-
+        
         position: relative; // as this is the container for .story__caption
+        
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+
+            // to make the content float around the this particular class' element, we use the shape-outside property on which we apply the circle() function. The shape-outside property only works if height, width and the float property is defined for an element. Syntax of the circle() function: circle(<radius> at <x, y coordinates> 
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            // <radius> of 50% in this case is 50% of the defined width which is 7.5rem. <x, y coordinates> of 50% 50% mean that the center of the circle is at 50% of width and 50% of height which is 7.5rem & 7.5rem in this case.
+
+            // incase the clip-path property is supported by the browser, we'd have no need for border-radius property.
+            border-radius: none;
+        }
 
         @include respond(phone) {
             transform: translate(-3rem) skewX(0);

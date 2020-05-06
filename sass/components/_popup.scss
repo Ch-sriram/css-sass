@@ -12,6 +12,13 @@
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
+    
+    // backdrop-filter property is a fairly new property and therefore, if we want any browser to read some of the latest properties, we need to use the @supports conditional to check whether a property is supported or not, and if it does, then we'll want the browser to apply some more CSS rules, shown as follows:
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
 
     &__content {
         position: absolute;
