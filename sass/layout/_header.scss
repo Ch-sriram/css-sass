@@ -20,9 +20,9 @@
 
     // we use 192dpi as a reference because that's the resolution of the apple's retina display. Anything greater than 192dpi should have the following properties apply to them mentioned in the media query below. (dpi = dots per inch)
     // Note that -webkit-min-device-pixel-ratio: 2; property is the same as min-resolution: 192dpi; It is used to support the Safari browsers.
-    @media (min-resolution: 192dpi) and (min-width: 37.5em),
-           (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-           (min-width: 125em) {
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+           only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+           only screen and (min-width: 125em) {
         @include background("../img/hero.jpg", $color-primary-light, $color-primary-dark);
     }
     

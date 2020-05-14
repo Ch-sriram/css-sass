@@ -12,11 +12,11 @@
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-        <!--
-        </!-- Uncomment for development --/>
-        <link rel="stylesheet" href="css/icon-font.css">
-        <link rel="stylesheet" href="css/style.css"> 
-        -->
+        
+        <!-- Uncomment for development -->
+        <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+        <!-- <link rel="stylesheet" href="css/style.css">  -->
+       
 
         <!-- Uncomment for production -->
         <link rel="stylesheet" href="css/style.min.css">
@@ -40,16 +40,16 @@
             <div class="navigation__background">&nbsp;</div>
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Nature Tours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+                    <li class="navigation__item"><a href="#section-about" class="navigation__link"><span>01</span>About Nature Tours</a></li>
+                    <li class="navigation__item"><a href="#section-features" class="navigation__link"><span>02</span>Your benefits</a></li>
+                    <li class="navigation__item"><a href="#section-tours" class="navigation__link"><span>03</span>Popular tours</a></li>
+                    <li class="navigation__item"><a href="#section-stories" class="navigation__link"><span>04</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#section-book" class="navigation__link"><span>05</span>Book now</a></li>
                 </ul>
             </nav>
         </div>
         
-        <header class="header">
+        <header class="header" id="header">
             <div class="header__logo-box">
                 <img src="img/logo-white.png" alt="logo" class="header__logo">
             </div>
@@ -60,13 +60,13 @@
                     <span class="heading-primary--sub">is where life happens</span>
                 </h1>
                 
-                <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+                <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
             </div>
         </header>
 
         <!-- main element is used to tell the search engines that the markup inside the main tag is the most crucial part of the website and contains the main part of the website -->
         <main>
-            <section class="section-about">
+            <section class="section-about" id="section-about">
                 <!-- .u-center-text is a utility class. Utility classes in SASS are very simple classes in CSS which only have one simple goal. In this case, it simply to center the text. -->
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
@@ -137,7 +137,7 @@
                 </div> <!-- end of .row -->
             </section>
 
-            <section class="section-features">
+            <section class="section-features" id="section-features">
                 
                 <div class="row">
                     <div class="col-1-of-4">
@@ -286,7 +286,7 @@
                 
             </section>
             
-            <section class="section-stories">
+            <section class="section-stories" id="section-stories">
                 
                 <!-- background video -->
                 <div class="bg-video">
@@ -352,7 +352,7 @@
 
             </section>
 
-            <section class="section-book">
+            <section class="section-book" id="section-book">
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
@@ -419,7 +419,7 @@
             
         </main>
 
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="footer__logo-box u-margin-bottom-big">
                 <!-- 
                     To write media queries in HTML, we use the <picture> element and inside that element, we use the <source> element, where we can use the srcset attribute (for specifying what image to use for the respective resolution/density screens) and the media attribute to specify where to use the images specified in the srcset attribute.
@@ -468,7 +468,7 @@
                     <p class="popup__text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ipsa quia voluptatibus. Fugiat, harum suscipit voluptatem perspiciatis consequuntur sit? Architecto nulla accusamus voluptatibus sed facere, modi obcaecati. Optio, animi voluptas? Ad tenetur in eos quas mollitia harum vero numquam, architecto nemo aliquam quam voluptatum. At quibusdam nisi porro iste, autem quia. Natus, corporis sint officia quidem culpa suscipit fuga adipisci iste voluptatem, minima obcaecati similique! Molestias ad aliquam sit fugit. Quidem laudantium totam dolorem autem dolore distinctio, laboriosam eius molestias consequatur deleniti maiores amet praesentium architecto id aliquid ut ea. Optio amet nihil illum eos rerum culpa dolore voluptatem similique.
                     </p>
-                    <a href="#" class="btn btn--green">Book now!</a>
+                    <a href="#section-book" class="btn btn--green">Book now!</a>
                 </div>
             </div>
         </div>
@@ -555,5 +555,10 @@
         </section> 
         -->
 
+        <script type="text/javascript">
+            document.querySelector(".navigation__list").addEventListener("click", () => {
+                document.getElementById("navi-toggle").checked = false;
+            });
+        </script>
     </body> 
 </html>

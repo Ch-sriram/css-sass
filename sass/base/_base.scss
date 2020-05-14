@@ -9,6 +9,7 @@
     the child of the html element. 
      */
     box-sizing: inherit;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -56,4 +57,10 @@ body {
     @include respond(tab-port) {
         padding: 0;
     }
+}
+
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
 }
