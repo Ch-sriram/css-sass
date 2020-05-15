@@ -47,3 +47,5 @@ For compilation, we run `npm run compile:sass` and during development, to see th
    2. **[SASS Demo II](https://codepen.io/ch-sriram/pen/MWaexGp)**
 2. Flex-box Resources
    1. **[Flex-box Demo I](https://codepen.io/ch-sriram/pen/mdeGLxq)**
+   2. **[Flex-box Demo II](https://codepen.io/ch-sriram/pen/jObvKqN)**
+   3. **[Flex-box Demo III](https://codepen.io/ch-sriram/pen/qBOJOWy)**
