@@ -1,0 +1,61 @@
+/*
+Instead of using SASS variables, we will use CSS custom properties, which are better known as CSS variables.
+
+The main advantage of CSS variables is that they can be manipulated in JavaScript, and we can also edit them in our Chrome/Firefox/IE Dev tools.
+
+Also, it's easier to use CSS variables in the calc() function and also CSS variables cascade and are inherited.
+
+Custom CSS Properties are always declared within a Scope/Declaration-Block i.e., inside the :root pseudo-class in general.
+
+When we put the CSS variables inside the :root pseudo-class, they'll be available inside the whole HTML document and therefore, the CSS variables will be inherited by all the child elements on the document and will be visible.
+*/
+
+
+// This is how we declare custom css properties
+:root {
+    --color-primary: #eb2f64;
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+    
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+}
+
+/*BASIC SETTINGS*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px now => 10px/16px = 62.5%
+}
+
+body {
+    // background-color: orchid; //TESTING
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-grey-dark-2);
+
+    // We use the CSS Custom Property(s) by passing them onto the var() method.
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    min-height: 100vh;  // min-height will always be 100vh, but can increase depending on the content inside the body.
+}
