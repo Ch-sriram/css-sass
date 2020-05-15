@@ -2,11 +2,11 @@
 
 Learning SASS (SCSS), a CSS pre-processor that makes writing CSS &mdash; 10 times faster, better and more organized.
 
-*Note*: This a course audited from **[here](https://www.udemy.com/course/advanced-css-and-sass/)**.
+*Note: This a course audited from **[here](https://www.udemy.com/course/advanced-css-and-sass/)**.*
 
 ## General SASS Install Notes
 
-Download and install node/npm from __[here](https://nodejs.org/)__. In the project where SASS is to be installed, type in <code>npm init</code> to initialize the project with a __package.json__ file. Now to install SASS, in the terminal (should be in pwd/our-project-directory), we type in <code>npm install node-sass --save-dev</code> and after the package is installed, we shall see that our **package.json** file should have the following content:
+Download and install node/npm from __[here](https://nodejs.org/)__. In the project where SASS is to be installed, type in `npm init` to initialize the project with a __package.json__ file. Now to install SASS, in the terminal (should be in pwd/our-project-directory), we type in `npm install node-sass --save-dev` and after the package is installed, we shall see that our **package.json** file should have the following content:
 
 <pre>
 {
@@ -28,11 +28,22 @@ Download and install node/npm from __[here](https://nodejs.org/)__. In the proje
 
 We can see that **node-sass** is installed as a **devDependency**.
 
-For compilation, we run <code>npm run compile:sass</code> and during development, to see the changes live, we use <code>npm run watch:sass</code>
+For compilation, we run `npm run compile:sass` and during development, to see the changes live, we use `npm run watch:sass`
 
 
 ## Child Repositories
 
-*Note*: *Two more child repositories to follow*.
+*Note: Two more child repositories to follow.*
 
 1. Nature Tours - **[Link to repo](https://github.com/Ch-sriram/nature-tours)**
+
+
+## Learning Resources
+
+*Note: More resources to follow.*
+
+1. SASS (SCSS) Resources
+   1. **[SASS Demo I](https://codepen.io/ch-sriram/pen/KKdMmZj)**
+   2. **[SASS Demo II](https://codepen.io/ch-sriram/pen/MWaexGp)**
+2. Flex-box Resources
+   1. **[Flex-box Demo I](https://codepen.io/ch-sriram/pen/mdeGLxq)**
