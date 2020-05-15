@@ -1,6 +1,6 @@
 # CSS &mdash; SASS
 
-Learning SASS (SCSS), a CSS pre-processor that makes writing CSS &mdash; 10 times faster, better and organized.
+Learning SASS (SCSS), a CSS pre-processor that makes writing CSS &mdash; 10 times faster, better and more organized.
 
 ## General SASS Install Notes
 
@@ -27,3 +27,10 @@ Download and install node/npm from __[here](https://nodejs.org/)__. In the proje
 We can see that **node-sass** is installed as a **devDependency**.
 
 For compilation, we run <code>npm run compile:sass</code> and during development, to see the changes live, we use <code>npm run watch:sass</code>
+
+
+## Child Repositories
+
+*Note*: *Two more child repositories to follow*.
+
+1. Nature Tours - **[Link to repo](https://github.com/Ch-sriram/nature-tours)**
