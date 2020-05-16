@@ -3,7 +3,10 @@
 <head>
     <!--
         Learnings:
-        - How and why to use CSS custom properties a.k.a CSS variables.
+        1. Why to use SVG icons vs. font icons.
+        2. How to find, generate and use SVG sprites in HTML.
+        3. How to change the colour of an SVG icon in CSS.
+        4. How to use more advanced flexbox alignment techniques, including justify-content, align-items, align-self and flex.
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +20,35 @@
 <body>
     <div class="container">
         <header class="header">
-            Header Part
+            <img src="img/logo.png" alt="trillo logo" class="logo">
+
+            <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Search hotels">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+            </form>
+
+            <nav class="user-nav">
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                    </svg>
+                    <span class="user-nav__notification">7</span>
+                </div>
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/sprite.svg#icon-chat"></use>
+                    </svg>
+                    <span class="user-nav__notification">13</span>
+                </div>
+                <div class="user-nav__user">
+                    <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
+                    <span class="user-nav__user-name">Jonas</span>
+                </div>
+            </nav>
         </header>
         <div class="content">
             <nav class="sidebar">
