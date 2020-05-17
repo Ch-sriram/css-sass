@@ -8,9 +8,19 @@
 }
 
 .header {
+    font-size: 1.4rem;
     height: 7rem;
     background-color: var(--color-white);
     border-bottom: var(--color-grey-light-2);
+
+    // since .header is the parent element of the the logo, search box and user navigation.
+    display: flex;
+    
+    // since we want logo at the left extreme, search box in the middle and user-nav at the right extreme.
+    justify-content: space-between;
+
+    // We will now align items along the cross axis as follows
+    align-items: center;
 }
 
 .content {

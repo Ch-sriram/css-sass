@@ -2,29 +2,68 @@
 // LOGO
 .logo {
     height: 3.25rem;
+    margin-left: 3rem;
 }
 
 ////////////////////////////////////////////////////////////
 // SEARCH
 .search {
-    &__input {
+    // background-color: orangered;    // TESTING
+    flex: 0 0 40%;
 
+    // This is a nested flex-box
+    display: flex;  // a flex item becomes a flex container.
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.25rem;
+        
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
     }
 
-    &__button {
+    &__input:focus + &__button { background-color: var(--color-grey-light-3); }
 
+    &__button {
+        border: none;
+        background-color: var(--color-grey-light-2);
+        &:focus { outline: none; }
+        &:active { transform: translateY(2px); }
     }
 
     &__icon {
         // To format an svg icon, we just set its height/width, unlike for a font-icon for which change the font-size.
         height: 2rem;
         width: 2rem;
+
+        // We can change the color of the svg sprite using the fill property. In this case, the fill property changes the colour of the magnifying glass in the search bar.
+        fill: var(--color-grey-dark-3);
     }
 }
 
 ////////////////////////////////////////////////////////////
 // USER NAVIGATION
 .user-nav {
+    background-color: greenyellow;  // TESTING
+
     &__icon-box {
 
     }
