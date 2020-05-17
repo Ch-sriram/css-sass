@@ -1,9 +1,26 @@
 ////////////////////////////////////////////////////////////
-// LOGO
-.logo {
-    height: 3.25rem;
-    margin-left: 3rem;
+// HERO-BOX
+.hero-box {
+    &__logo {
+        height: 3.25rem;
+        margin-left: 2rem;
+        margin-right: .5rem;
+    }
+
+    &__text {
+        &:hover,
+        &:visited,
+        &:link { 
+            text-decoration: none;
+            font-family: 'Yeseva One', cursive;
+            font-size: 3.5rem;
+            color: var(--color-primary);
+        }
+
+        &:active { transform: translateY(2px); }
+    }
 }
+
 
 ////////////////////////////////////////////////////////////
 // SEARCH
@@ -62,31 +79,61 @@
 ////////////////////////////////////////////////////////////
 // USER NAVIGATION
 .user-nav {
-    background-color: greenyellow;  // TESTING
+    // background-color: greenyellow;  // TESTING
+    
+    // Since this item itself is a flex item, we can apply the align-self property
+    align-self: stretch;
+
+    // Nested flex-box
+    display: flex;  // This flex item is now a flex container
+    align-items: center;
+
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        transition: background-color .2s;
+    }
+
+    & > *:hover {
+        background-color:var(--color-grey-light-2);
+    }
 
     &__icon-box {
-
+        position: relative;
     }
 
     &__icon {
         height: 2.25rem;
         width: 2.25rem;
+        fill: var(--color-grey-dark-2);
     }
 
     &__notification {
+        font-size: .8rem;
+        height: 1.9rem;
+        width: 1.9rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: var(--color-white);
 
-    }
+        // Positioning the notification bubbles
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
 
-    &__user {
-
+        // Centering the text inside the notification bubbles
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__user-photo {
         height: 3.75rem;
         border-radius: 50%;
-    }
-
-    &__user-name {
-
+        margin-right: 1rem;
     }
 }
