@@ -137,3 +137,49 @@
         margin-right: 1rem;
     }
 }
+
+
+////////////////////////////////////////////////////////////
+// SIDE NAVIGATION
+.side-nav {
+    &__item {
+
+    }
+
+    &__link {
+
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}
+
+
+////////////////////////////////////////////////////////////
+// LEGAL TEXT
+.legal {
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    padding: 2.5rem;
+
+    a { 
+        display: inline-block; 
+        transition: all .2s;
+    }
+
+    a:visited,
+    a:link,
+    a:hover,
+    a:active {
+        text-decoration: none;
+        color: var(--color-primary-light);
+    }
+
+    a:hover {
+        transform: scale(1.2) skewY(5deg);
+        background-color: var(--color-grey-dark-1);
+        box-shadow: var(--shadow-light);
+    }
+}

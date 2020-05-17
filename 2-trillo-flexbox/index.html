@@ -3,10 +3,9 @@
 <head>
     <!--
         Learnings:
-        1. Why to use SVG icons vs. font icons.
-        2. How to find, generate and use SVG sprites in HTML.
-        3. How to change the colour of an SVG icon in CSS.
-        4. How to use more advanced flexbox alignment techniques, including justify-content, align-items, align-self and flex.
+        1. How to use scaleY and multiple transition properties with different settings, to create a creative hover effect.
+        2. How and why to use the currentColor CSS variable.
+        3. How to use some more advanced flexbox alignment techniques, including flex-direction, justify-content and align-items.
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,9 +57,47 @@
                 </div>
             </nav>
         </header>
+
         <div class="content">
             <nav class="sidebar">
-                Navigation
+                <ul class="side-nav">
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Hotel</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                            </svg>
+                            <span>Flight</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-key"></use>
+                            </svg>
+                            <span>Car Rental</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+                            </svg>
+                            <span>Tours</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="legal">
+                    &copy; 2020 &mdash; (trillo) template for hotel websites. All rights reserved. Course project made by <a href="https://github.com/Ch-sriram" target="_blank">Chandrabhatta Sriram</a>. The course followed can be found <a href="https://www.udemy.com/course/advanced-css-and-sass/" target="_blank">here</a>. Design &copy; by <a href="https://twitter.com/jonasschmedtman" target="_blank">Jonas Schmedtmann</a>
+                </div>
             </nav>
             <main class="hotel-view">
                 Hotel View
