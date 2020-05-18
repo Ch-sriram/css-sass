@@ -40,7 +40,28 @@
     background-color: var(--color-white);
     
     // background-color: orangered;     // TESTING
-    height: 80rem;                      // TESTING
+    // height: 80rem;                   // TESTING
 
     flex: 1; // flex-grow: 1; The element occupies the remaining space in the .content flex container.
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--grey-light-border);
+}
+
+.description {
+    font-size: 1.4rem;
+    background-color: var(--color-white);
+    box-shadow: --shadow-dark-2;
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+}
+
+.user-reviews {
+    background-color: greenyellow;
+    flex: 1;
 }
