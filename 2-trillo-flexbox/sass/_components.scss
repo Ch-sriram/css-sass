@@ -15,6 +15,11 @@
             font-family: 'Yeseva One', cursive;
             font-size: 3.5rem;
             color: var(--color-primary);
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 0;
+            }
+
         }
 
         &:active { transform: translateY(2px); }
@@ -32,6 +37,12 @@
     display: flex;  // a flex item becomes a flex container.
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;   // this item will be moved to the end.
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
 
     &__input {
         font-family: inherit;
@@ -204,6 +215,11 @@
             justify-content: center;
             padding: 2rem;
         }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
     }
 
     &__icon {
@@ -212,6 +228,13 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor; // use the color of the current/parent element.
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 
@@ -252,6 +275,10 @@
 .gallery {
     display: flex;
 
+    @media only screen and (max-width: $bp-smallest) {
+        flex-direction: column;
+    }
+
     &__photo {
         width: 100%;
         display: block;
@@ -271,6 +298,17 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-weight: 600;
+            font-size: 1.2rem;
+            padding: 1.2rem;
+        }
     }
 
     &__stars {
@@ -283,12 +321,26 @@
         width: 1.75rem;
         height: 1.75rem;
         fill: var(--color-primary);
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+
+        @media only screen and (max-width: $bp-xsmall) {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
     }
 
     &__location {
         font-size: 1.2rem;
         display: flex;
         vertical-align: center;
+
+        // @media only screen and (max-width: $bp-smallest) {
+        //     font-size: .5rem;
+        // }
     }
 
     &__icon-location {
@@ -306,15 +358,27 @@
         justify-content: center;
         flex-direction: column;
 
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
+
         &-average {
             font-size: 2.25rem;
             font-weight: 300;
             margin-bottom: -3px;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 1.8rem;
+            }
         }
 
         &-count {
             font-size: .8rem;
             text-transform: uppercase;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: .5rem;
+            }
         }
     }
 }

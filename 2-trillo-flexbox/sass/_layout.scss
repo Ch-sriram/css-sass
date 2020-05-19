@@ -26,6 +26,12 @@
 
     // We will now align items along the cross axis as follows
     align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        align-content: space-around; // to control the space between the rows of the flex container.
+        height: 11rem;
+    }
 }
 
 .content {
@@ -64,6 +70,10 @@
     @media only screen and (max-width: $bp-medium) {
         padding: 3rem;
     }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
 }
 
 .description {
@@ -76,6 +86,11 @@
     @media only screen and (max-width: $bp-medium) {
         padding: 2rem;
         margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
     }
 }
 
