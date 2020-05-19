@@ -103,3 +103,43 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.footer {
+    display: none;
+    
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-grey-dark-1);
+        text-align: center;
+        border: none;
+    
+        &__legal-text {
+            font-size: 1.2rem;
+            color: var(--color-grey-light-4);
+            width: 90%;
+            padding: 3rem;
+            
+    
+            a { 
+                display: inline-block; 
+                transition: all .2s;
+            }
+    
+            a:visited,
+            a:link,
+            a:hover,
+            a:active {
+                text-decoration: none;
+                color: var(--color-primary-light);
+            }
+    
+            a:hover {
+                transform: scale(1.2) skewY(5deg);
+                background-color: var(--color-grey-dark-1);
+                box-shadow: var(--shadow-light);
+            }
+        }
+    }
+
+}
