@@ -75,7 +75,7 @@ There are 2 scripts of importance:
 - When developing/working-on the project, run the script named **start** by typing in `npm run start`.
 - When we need to deploy the project, we run the script named **build:css** by typing in `npm run build:css`.
 
-**Note: In case, if you do not want to go through this lengthy installation process, you can always download the respective child repository as a zip file and run `npm install` to install all the `"devDependencies"` and the `"scripts"` automatically.**
+**Note**: In case, if you do not want to go through this lengthy installation process, you can always download the respective child repository as a zip file and run `npm install` **to install all the `"devDependencies"` and the `"scripts"` automatically**.
 
 ## Child Repositories
 
