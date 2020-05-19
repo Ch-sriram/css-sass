@@ -39,6 +39,15 @@ When we put the CSS variables inside the :root pseudo-class, they'll be availabl
     --grey-light-border: 1px solid var(--color-grey-light-2);
 }
 
+// CSS Custom Properties cannot be used for media queries, so 
+// for that reason, we are using SCSS variables for storing 
+// the sizes of different screens depending on their 
+// breakpoints.
+
+$bp-largest: 75em;  // 1200px => 1200/16 = 75
+$bp-large: 68.75em; // 1100px => 1100/16 = 68.75
+$bp-medium: 56.25em;// 900px  =>  900/16 = 56.25
+
 /*BASIC SETTINGS*/
 * {
     margin: 0;
@@ -54,6 +63,10 @@ When we put the CSS variables inside the :root pseudo-class, they'll be availabl
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px now => 10px/16px = 62.5%
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%; // 1rem = 8px, now => 8px/16px = 50%
+    }
 }
 
 body {
