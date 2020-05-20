@@ -99,3 +99,4 @@ There are 2 scripts of importance:
 3. Grid
    1. **[Grid Demo I](https://codepen.io/ch-sriram/pen/KKdbqGg)**
    2. **[Grid Demo II](https://codepen.io/ch-sriram/pen/RwWEZGw)**
+   3. **[Grid Demo III](https://codepen.io/ch-sriram/pen/qBOLPjN)**
