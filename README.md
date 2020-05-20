@@ -89,10 +89,12 @@ There are 2 scripts of importance:
 
 *Note: More resources to follow.*
 
-1. SASS (SCSS) Resources
+1. SASS (SCSS)
    1. **[SASS Demo I](https://codepen.io/ch-sriram/pen/KKdMmZj)**
    2. **[SASS Demo II](https://codepen.io/ch-sriram/pen/MWaexGp)**
-2. Flex-box Resources
-   1. **[Flex-box Demo I](https://codepen.io/ch-sriram/pen/mdeGLxq)**
-   2. **[Flex-box Demo II](https://codepen.io/ch-sriram/pen/jObvKqN)**
-   3. **[Flex-box Demo III](https://codepen.io/ch-sriram/pen/qBOJOWy)**
+2. Flexbox
+   1. **[Flexbox Demo I](https://codepen.io/ch-sriram/pen/mdeGLxq)**
+   2. **[Flexbox Demo II](https://codepen.io/ch-sriram/pen/jObvKqN)**
+   3. **[Flexbox Demo III](https://codepen.io/ch-sriram/pen/qBOJOWy)**
+3. Grid
+   1. **[Grid Demo I](https://codepen.io/ch-sriram/pen/KKdbqGg)**
