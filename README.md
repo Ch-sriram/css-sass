@@ -101,4 +101,4 @@ There are 2 scripts of importance:
    2. **[Grid Demo II](https://codepen.io/ch-sriram/pen/RwWEZGw)**
    3. **[Grid Demo III](https://codepen.io/ch-sriram/pen/qBOLPjN)**
    4. **[Grid Demo IV](https://codepen.io/ch-sriram/pen/JjYwZqW)**
-   5. **[Grid Challenge - I](https://github.com/Ch-sriram/css-sass/blob/dev/3-nexter-grid/Resources/challenge--1.png)** | [Solution](https://codepen.io/ch-sriram/pen/XWmOOzw)
+   5. **[Grid Challenge - I](https://github.com/Ch-sriram/css-sass/blob/dev/3-nexter-grid/Resources/challenge--1.png)** | **[Solution](https://codepen.io/ch-sriram/pen/XWmOOzw)**
