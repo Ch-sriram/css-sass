@@ -101,3 +101,4 @@ There are 2 scripts of importance:
    5. **[Grid Challenge - I](https://github.com/Ch-sriram/css-sass/blob/dev/3-nexter-grid/Resources/challenge--1.png)** | **[Solution](https://codepen.io/ch-sriram/pen/XWmOOzw)**
    6. **[Grid Demo - V \[Naming Grid Lines\]](https://codepen.io/ch-sriram/pen/gOaEjRz)**
    7. **[Grid Demo - VI \[Naming Grid Areas\]](https://codepen.io/ch-sriram/pen/PoPLdpr)**
+   8. **[Grid Demo - VII \[Implicit vs. Explicit Grid\]](https://codepen.io/ch-sriram/pen/QWjoZmQ)**
