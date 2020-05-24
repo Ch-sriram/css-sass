@@ -84,10 +84,7 @@ There are 2 scripts of importance:
 1. Nature Tours - **[Link to repo](https://github.com/Ch-sriram/nature-tours)**
 2. Trillo (flexbox) - **[Link to repo](https://github.com/Ch-sriram/trillo-flexbox)**
 
-
 ## Learning Resources
-
-*Note: More resources to follow.*
 
 1. SASS (SCSS)
    1. **[SASS Demo I \[Variables & Nesting\]](https://codepen.io/ch-sriram/pen/KKdMmZj)**
