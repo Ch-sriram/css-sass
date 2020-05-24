@@ -90,15 +90,16 @@ There are 2 scripts of importance:
 *Note: More resources to follow.*
 
 1. SASS (SCSS)
-   1. **[SASS Demo I](https://codepen.io/ch-sriram/pen/KKdMmZj)**
-   2. **[SASS Demo II](https://codepen.io/ch-sriram/pen/MWaexGp)**
+   1. **[SASS Demo I \[Variables & Nesting\]](https://codepen.io/ch-sriram/pen/KKdMmZj)**
+   2. **[SASS Demo II \[@mixin, @extends & @function\]](https://codepen.io/ch-sriram/pen/MWaexGp)**
 2. Flexbox
    1. **[Flexbox Demo I](https://codepen.io/ch-sriram/pen/mdeGLxq)**
    2. **[Flexbox Demo II](https://codepen.io/ch-sriram/pen/jObvKqN)**
    3. **[Flexbox Demo III](https://codepen.io/ch-sriram/pen/qBOJOWy)**
 3. Grid
-   1. **[Grid Demo I](https://codepen.io/ch-sriram/pen/KKdbqGg)**
-   2. **[Grid Demo II](https://codepen.io/ch-sriram/pen/RwWEZGw)**
-   3. **[Grid Demo III](https://codepen.io/ch-sriram/pen/qBOLPjN)**
-   4. **[Grid Demo IV](https://codepen.io/ch-sriram/pen/JjYwZqW)**
+   1. **[Grid Demo I \[Making The First Grid\]](https://codepen.io/ch-sriram/pen/KKdbqGg)**
+   2. **[Grid Demo II \[Using fr Unit\]](https://codepen.io/ch-sriram/pen/RwWEZGw)**
+   3. **[Grid Demo III \[Positioning Grid Items\]](https://codepen.io/ch-sriram/pen/qBOLPjN)**
+   4. **[Grid Demo IV \[Spanning Grid Items\]](https://codepen.io/ch-sriram/pen/JjYwZqW)**
    5. **[Grid Challenge - I](https://github.com/Ch-sriram/css-sass/blob/dev/3-nexter-grid/Resources/challenge--1.png)** | **[Solution](https://codepen.io/ch-sriram/pen/XWmOOzw)**
+   6. **[Grid Demo - V \[Naming Grid Lines\]](https://codepen.io/ch-sriram/pen/gOaEjRz)**
