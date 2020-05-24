@@ -102,3 +102,4 @@ There are 2 scripts of importance:
    6. **[Grid Demo - V \[Naming Grid Lines\]](https://codepen.io/ch-sriram/pen/gOaEjRz)**
    7. **[Grid Demo - VI \[Naming Grid Areas\]](https://codepen.io/ch-sriram/pen/PoPLdpr)**
    8. **[Grid Demo - VII \[Implicit vs. Explicit Grid\]](https://codepen.io/ch-sriram/pen/QWjoZmQ)**
+   9. **[Grid Demo - VIII \[Aligning Grid Items in different Grid Areas\]](https://codepen.io/ch-sriram/pen/pojYqOe)**
