@@ -104,3 +104,4 @@ There are 2 scripts of importance:
    8. **[Grid Demo - VII \[Implicit vs. Explicit Grid\]](https://codepen.io/ch-sriram/pen/QWjoZmQ)**
    9. **[Grid Demo - VIII \[Aligning Grid Items in different Grid Areas\]](https://codepen.io/ch-sriram/pen/pojYqOe)**
    10. **[Grid Demo - IX \[Aligning Grid Tracks\]](https://codepen.io/ch-sriram/pen/OJyqdVX)**
+   11. **[Grid Demo - X \[min-content, max-content & minmax() function\]](https://codepen.io/ch-sriram/pen/vYNwYWm)**
