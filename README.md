@@ -6,8 +6,8 @@ Learning SASS (SCSS), a CSS pre-processor that makes writing CSS &mdash; 10 time
 
 ## Child Repositories (Project Deployments)
 
-1. Nature Tours - **[Live here]()** | **[GitHub Repo](https://github.com/Ch-sriram/nature-tours)**
-2. Trillo (flexbox) - **[Live here]()** | **[GitHub Repo](https://github.com/Ch-sriram/trillo-flexbox)**
+1. Nature Tours - **[Live here](https://ch-sriram.github.io/nature-tours/)** | **[GitHub Repo](https://github.com/Ch-sriram/nature-tours)**
+2. Trillo (flexbox) - **[Live here](https://trillo-ram.netlify.app/)** | **[GitHub Repo](https://github.com/Ch-sriram/trillo-flexbox)**
 
 ## Reference Concepts @codepen
 
